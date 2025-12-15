@@ -12,6 +12,33 @@ config I2C_RENESAS_RA_IIC
 	help
 	  Enable Renesas RA I2C IIC Driver.
 
+config I2C_RENESAS_RA_IIC_SLAVE
+	bool "Renesas RA I2C IIC Slave"
+	default y
+	depends on DT_HAS_RENESAS_RA_IIC_SLAVE_ENABLED
+	select USE_RA_FSP_I2C_IIC_SLAVE
+	select PINCTRL
+	help
+	  Enable Renesas RA I2C IIC Slave Driver.
+
+config I2C_RENESAS_RA_IICA_SLAVE
+	bool "Renesas RA I2C IICA Slave"
+	default y
+	depends on DT_HAS_RENESAS_RA_IICA_SLAVE_ENABLED
+	select USE_RA_FSP_I2C_IICA_SLAVE
+	select PINCTRL
+	help
+	  Enable Renesas RA I2C IICA Slave Driver.
+
+config I2C_RENESAS_RA_IIC_B_SLAVE
+	bool "Renesas RA I2C IIC-B Slave"
+	default y
+	depends on DT_HAS_RENESAS_RA_IIC_B_SLAVE_ENABLED
+	select USE_RA_FSP_I2C_IIC_B_SLAVE
+	select PINCTRL
+	help
+	  Enable Renesas RA I2C IIC-B Slave Driver.
+
 config I2C_RENESAS_RA_SCI
 	bool "Renesas RA SCI I2C"
 	default y

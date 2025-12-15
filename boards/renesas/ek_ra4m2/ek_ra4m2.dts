@@ -167,6 +167,17 @@
 	status = "okay";
 };
 
+&iic1 {
+	pinctrl-0 = <&iic1_default>;
+	pinctrl-names = "default";
+	compatible = "renesas,ra-iic-slave";
+	channel = <1>;
+	slave-address = <0x50>;
+	interrupts = <91 1>, <92 1>, <93 1>, <94 1>;
+	interrupt-names = "rxi", "txi", "tei", "eri";
+	status = "okay";
+};
+
 &flash1 {
 	partitions {
 		compatible = "fixed-partitions";

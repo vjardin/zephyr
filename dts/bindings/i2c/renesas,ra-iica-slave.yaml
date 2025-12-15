@@ -1,0 +1,29 @@
+# Copyright (c) 2024 Renesas Electronics Corporation
+# Copyright (c) 2024 Vincent Jardin, Free Mobile
+# SPDX-License-Identifier: Apache-2.0
+
+description: Renesas RA IICA Slave controller
+
+compatible: "renesas,ra-iica-slave"
+
+include: [i2c-peripheral.yaml, pinctrl-device.yaml]
+
+properties:
+  reg:
+    required: true
+
+  channel:
+    required: true
+    type: int
+
+  interrupts:
+    required: true
+
+  slave-address:
+    type: array
+    required: true
+    description: I2C slave address(es)
+
+  interrupt-priority-level:
+    type: int
+    default: 12

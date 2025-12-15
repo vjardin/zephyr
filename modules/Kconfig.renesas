@@ -45,6 +45,21 @@ config USE_RA_FSP_I2C_IIC
 	help
 	  Enable Renesas RA I2C IIC Master driver
 
+config USE_RA_FSP_I2C_IIC_SLAVE
+	bool
+	help
+	  Enable Renesas RA I2C IIC Slave driver
+
+config USE_RA_FSP_I2C_IICA_SLAVE
+	bool
+	help
+	  Enable Renesas RA I2C IICA Slave driver
+
+config USE_RA_FSP_I2C_IIC_B_SLAVE
+	bool
+	help
+	  Enable Renesas RA I2C IIC-B Slave driver
+
 config USE_RA_FSP_SCI_I2C
 	bool
 	help

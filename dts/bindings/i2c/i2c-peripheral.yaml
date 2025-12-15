@@ -1,0 +1,6 @@
+# Copyright (c) 2024 Vincent Jardin
+# SPDX-License-Identifier: Apache-2.0
+
+# Common fields for I2C peripheral (slave/target) controllers
+
+include: base.yaml
